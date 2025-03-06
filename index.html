@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#how">About us</a></li>
+          <li><a href="#speakers">Services</a></li>
+          <li><a href="#students">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="home" id="home">
+        <img src="img/bg_home.png" />
+        <div class="row">
+          <div class="column">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <p class="headline1">Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia
+              molestiae dolorum tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero
+              voluptate!</p>
+            <button>Зареєструватися</button>
+          </div>
+          <div class="column">
+            <img src="img/home1.png" />
+            <img src="img/home.png" />
+            <div class="person">
+              <img src="img/home_img.png" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="how" id="how">
+        <h2>Кому буде корисний курс</h2>
+        <div class="grid">
+          <div class="left-column">
+            <h2>Trusted By Worldwide Clients Since 1</h2>
+            <p class="headline2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum
+              tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero voluptate!</p>
+          </div>
+          <div class="right-column">
+            <div class="block">
+              <h4>First On Field</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+            </div>
+            <div class="block">
+              <h4>Worldwide</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+            </div>
+            <div class="block">
+              <h4>Easy to reach</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+            </div>
+            <div class="block">
+              <h4>24/7 Support</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="speakers" id="speakers">
+        <h2>Спікери курсу</h2>
+        <div class="wrapper">
+          <div class="left-column">
+            <img id="speakerImage" src="img/speaker1.png" alt="Спікер">
+          </div>
+          <div class="right-column">
+            <div class="text-block" id="textBlock">
+              <h2 id="speakerTitle">Web Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis
+                dolore obcaecati.</p>
+            </div>
+            <div class="buttons">
+              <button class="tab active" data-title="Web Development">Web Development</button>
+              <button class="tab" data-title="Digital Marketing">Digital Marketing</button>
+              <button class="tab" data-title="SaaS Products">SaaS Products</button>
+              <button class="tab" data-title="Apps Development">Apps Development</button>
+              <button class="tab" data-title="SEO Services">SEO Services</button>
+              <button class="tab" data-title="Data Analysis">Data Analysis</button>
+            </div>
+            <div class="pagination">
+              <button id="prevPageSpeakers">&#60;</button>
+              <span id="pageNumberSpeakers">1 / 3</span>
+              <button id="nextPageSpeakers">&#62;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="learn" id="learn">
+        <h2>Як проходить навчання</h2>
+        <div class="wrapper">
+          <div class="left-column">
+            <img id="learnImage" src="img/learn1.png" alt="Навчання">
+            <a href="*">
+              <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.9795 18.6837C13.3672 18.6837 15.3896 17.8851 17.0467 16.288C18.7039 14.6908 19.5324 12.7415 19.5324 10.4402C19.5324 8.13886 18.7039 6.1896 17.0467 4.59241C15.3896 2.99523 13.3672 2.19663 10.9795 2.19663C8.5918 2.19663 6.56939 2.99523 4.91226 4.59241C3.25513 6.1896 2.42656 8.13886 2.42656 10.4402C2.42656 12.7415 3.25513 14.6908 4.91226 16.288C6.56939 17.8851 8.5918 18.6837 10.9795 18.6837ZM14.4186 9.59013C15.0497 9.98115 15.0497 10.8992 14.4186 11.2902L9.8334 14.1312C9.16722 14.544 8.3067 14.0649 8.3067 13.2812V7.59919C8.3067 6.8155 9.16722 6.33637 9.8334 6.74913L14.4186 9.59013Z"
+                  fill="#1C1B1F" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.80994 19.9332C8.1107 20.4741 9.50055 20.7446 10.9795 20.7446C12.4584 20.7446 13.8483 20.4741 15.149 19.9332C16.4498 19.3922 17.5813 18.658 18.5435 17.7306C19.5057 16.8032 20.2674 15.7126 20.8287 14.4589C21.39 13.2052 21.6707 11.8656 21.6707 10.4402C21.6707 9.01474 21.39 7.67516 20.8287 6.42145C20.2674 5.16775 19.5057 4.07719 18.5435 3.14979C17.5813 2.22239 16.4498 1.4882 15.149 0.947217C13.8483 0.406234 12.4584 0.135742 10.9795 0.135742C9.50055 0.135742 8.1107 0.406234 6.80994 0.947217C5.50918 1.4882 4.3777 2.22239 3.41549 3.14979C2.45329 4.07719 1.69155 5.16775 1.13026 6.42145C0.568973 7.67516 0.28833 9.01474 0.28833 10.4402C0.28833 11.8656 0.568973 13.2052 1.13026 14.4589C1.69155 15.7126 2.45329 16.8032 3.41549 17.7306C4.3777 18.658 5.50918 19.3922 6.80994 19.9332ZM17.0467 16.288C15.3896 17.8851 13.3672 18.6837 10.9795 18.6837C8.5918 18.6837 6.56939 17.8851 4.91226 16.288C3.25513 14.6908 2.42656 12.7415 2.42656 10.4402C2.42656 8.13886 3.25513 6.1896 4.91226 4.59241C6.56939 2.99523 8.5918 2.19663 10.9795 2.19663C13.3672 2.19663 15.3896 2.99523 17.0467 4.59241C18.7039 6.1896 19.5324 8.13886 19.5324 10.4402C19.5324 12.7415 18.7039 14.6908 17.0467 16.288Z"
+                  fill="#1C1B1F" />
+                <path
+                  d="M8.3067 13.2812C8.3067 14.0649 9.16722 14.544 9.8334 14.1312L14.4186 11.2902C15.0497 10.8992 15.0497 9.98115 14.4186 9.59013L9.8334 6.74913C9.16722 6.33637 8.3067 6.8155 8.3067 7.59919V13.2812Z"
+                  fill="white" />
+              </svg>
+              Дивитися відео</a>
+          </div>
+          <div class="right-column">
+            <h3>Знакомитесь с платформой</h3>
+            <p>Lorem ipsum dolor sit amet consectetur. Felis amet consectetur sollicitudin at aliquam tincidunt laoreet
+              auctor elit. Lectus ipsum sapien id turpis elit cras ac. Velit risus nisl ut dictum venenatis mauris
+              faucibus. Aliquam vehicula gravida fermentum in sodales fringilla mi at. Turpis volutpat parturient elit
+              blandit proin magna pretium vestibulum elit. A massa adipiscing pellentesque tempor ac vel.</p>
+            <div class="pagination">
+              <button id="prevPageLearn">&#60;</button>
+              <span id="pageNumberLearn">1 / 4</span>
+              <button id="nextPageLearn">&#62;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="students" id="students">
+        <h2>Кейси учнів</h2>
+        <div class="wrapper">
+          <div class="left-column">
+            <img id="studentImage" src="img/student1.png" alt="Спікер">
+          </div>
+          <div class="right-column">
+            <div class="text-block" id="textBlock">
+              <h2 id="studentTitle">Web Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis
+                dolore obcaecati.</p>
+            </div>
+            <div class="buttons">
+              <button class="tab active" data-title="Web Development">Web Development</button>
+              <button class="tab" data-title="Digital Marketing">Digital Marketing</button>
+              <button class="tab" data-title="SaaS Products">SaaS Products</button>
+              <button class="tab" data-title="Apps Development">Apps Development</button>
+              <button class="tab" data-title="SEO Services">SEO Services</button>
+              <button class="tab" data-title="Data Analysis">Data Analysis</button>
+            </div>
+            <div class="pagination">
+              <button id="prevPageStudents">&#60;</button>
+              <span id="pageNumberStudents">1 / 12</span>
+              <button id="nextPageStudents">&#62;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="career" id="career">
+        <h2>Центр кар'єри</h2>
+        <div class="wrapper1" id="wrapper-career1">
+          <div class="left">
+            <div class="text">
+              <h3>Для взрослых</h3>
+              <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi aut qui est ab, corporis quis maiores
+                reiciendis explicabo odio tenetur nulla sint vel.</p>
+            </div>
+            <div class="blockButton">
+              <button>Востребованные профессии</button>
+              <button class="btn-career2">Практика на реальных задачах</button>
+            </div>
+          </div>
+          <img src="img/career1.png" alt="Кар'єра">
+        </div>
+        <div class="wrapper2" id="wrapper-career2">
+          <div class="left">
+            <div class="text">
+              <h3>Для взрослых</h3>
+              <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi aut qui est ab, corporis quis maiores
+                reiciendis explicabo odio tenetur nulla sint vel.</p>
+            </div>
+            <div class="blockButton">
+              <button class="btn-career1">Востребованные профессии</button>
+              <button>Практика на реальных задачах</button>
+            </div>
+          </div>
+          <img src="img/career2.png" alt="Кар'єра">
+        </div>
+      </section>
+
+      <section class="cources" id="cources">
+        <h2>Програма курсу</h2>
+        <div class="wrapper">
+          <div class="left-column">
+            <img id="courceImage" src="img/cource1.png" alt="Спікер">
+          </div>
+          <div class="right-column">
+            <div class="text-block" id="textBlock">
+              <h2 id="courceTitle">Web Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis
+                dolore obcaecati.</p>
+            </div>
+            <div class="cource-accord">
+              <div class="cource-head">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+              <div class="pagination">
+                <span id="pageNumberCources">1</span>
+                <button id="prevPageCources">
+                  <svg width="17" height="15" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.08348 4.58317C4.40564 4.90534 4.40564 5.42767 4.08348 5.74984C3.76131 6.072 3.23898 6.072 2.91681 5.74984L0.873916 3.70694C0.483392 3.31642 0.483391 2.68326 0.873916 2.29273L2.91681 0.249837C3.23898 -0.0723286 3.76131 -0.072329 4.08348 0.249837C4.40564 0.572004 4.40564 1.09434 4.08348 1.4165L3.33348 2.1665H6.00014C6.46038 2.1665 6.83348 2.5396 6.83348 2.99984C6.83348 3.46008 6.46038 3.83317 6.00014 3.83317H3.33348L4.08348 4.58317Z"
+                      fill="white" />
+                  </svg>
+
+                </button>
+                <button id="toggleAccordion" class="accordion-btn">
+                  <svg width="16" height="16" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.33334 5.83317C5.78105 5.83317 5.33334 6.28088 5.33334 6.83317V8.33317C5.33334 8.79341 4.96024 9.1665 4.5 9.1665C4.03977 9.1665 3.66667 8.79341 3.66667 8.33317V6.83317C3.66667 6.28089 3.21896 5.83317 2.66667 5.83317H1.16667C0.706434 5.83317 0.333338 5.46007 0.333338 4.99984C0.333338 4.5396 0.706433 4.1665 1.16667 4.1665H2.66667C3.21896 4.1665 3.66667 3.71879 3.66667 3.1665V1.6665C3.66667 1.20627 4.03977 0.83317 4.5 0.83317C4.96024 0.83317 5.33334 1.20627 5.33334 1.6665V3.1665C5.33334 3.71879 5.78105 4.1665 6.33334 4.1665H7.83334C8.29358 4.1665 8.66667 4.5396 8.66667 4.99984C8.66667 5.46007 8.29358 5.83317 7.83334 5.83317H6.33334Z"
+                      fill="white" />
+                  </svg>
+
+                </button>
+                <button id="nextPageCources">
+                  <svg width="17" height="15" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.91652 1.41683C2.59436 1.09466 2.59436 0.572327 2.91652 0.250161C3.23869 -0.0720041 3.76102 -0.072005 4.08319 0.25016L6.12608 2.29306C6.51661 2.68358 6.51661 3.31674 6.12608 3.70727L4.08319 5.75016C3.76102 6.07233 3.23869 6.07233 2.91652 5.75016C2.59436 5.428 2.59436 4.90566 2.91652 4.5835L3.66652 3.83349L0.999858 3.83349C0.539621 3.83349 0.166525 3.4604 0.166525 3.00016C0.166525 2.53992 0.539621 2.16683 0.999858 2.16683L3.66652 2.16683L2.91652 1.41683Z"
+                      fill="white" />
+                  </svg>
+
+                </button>
+                <span>8</span>
+              </div>
+              <div class="accordion-container">
+                <div id="accordionContent" class="accordion-content">
+
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="tab active" data-title="Web Development">Web Development</button>
+              <button class="tab" data-title="Digital Marketing">Digital Marketing</button>
+              <button class="tab" data-title="SaaS Products">SaaS Products</button>
+              <button class="tab" data-title="Apps Development">Apps Development</button>
+              <button class="tab" data-title="SEO Services">SEO Services</button>
+              <button class="tab" data-title="Data Analysis">Data Analysis</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Контейнер для акордеона -->
+
+
+
+      <section class="comunity" id="comunity">
+        <h2>Експертна спільнота</h2>
+        <div class="wrapper1" id="wrapper-comunity1">
+          <div class="left">
+            <div class="text">
+              <h3>Центр карьеры</h3>
+              <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi aut qui est ab, corporis quis maiores
+                reiciendis explicabo odio tenetur nulla sint velipsum dolor sit amet consectetur adipisicing elit. Quod,
+                id sequi aut qui est ab, corporis quis maiores reiciendis explicabo odio tenetur nulla sint vel.</p>
+            </div>
+            <div class="blockButton">
+              <button>Востребованные профессии</button>
+              <button class="btn-comunity2">Практика на реальных задачах</button>
+            </div>
+          </div>
+          <img src="img/comunity1.png" alt="Спільнота">
+        </div>
+        <div class="wrapper2" id="wrapper-comunity2">
+          <div class="left">
+            <div class="text">
+              <h3>Центр карьеры</h3>
+              <p>ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi aut qui est ab, corporis quis maiores
+                reiciendis explicabo odio tenetur nulla sint velipsum dolor sit amet consectetur adipisicing elit. Quod,
+                id sequi aut qui est ab, corporis quis maiores reiciendis explicabo odio tenetur nulla sint vel.</p>
+            </div>
+            <div class="blockButton">
+              <button class="btn-comunity1">Востребованные профессии</button>
+              <button>Практика на реальных задачах</button>
+            </div>
+          </div>
+          <img src="img/comunity2.png" alt="Спільнота">
+        </div>
+      </section>
+
+      <article class="tariffs" id="tariffs">
+        <h2>Тарифи навчання</h2>
+        <div class="wrapper">
+          <div class="column">
+            <h5>Колеги</h5>
+            <div class="headline3">Діє при оплаті навчання групи з трьох осіб</div>
+            <div class="price">
+              <div class="col">
+                <div class="headline3">9 модулів за 6 тижнів</div>
+                <div class="group">
+                  <div class="pr1">3 329 <span>/місяць</span></div>
+                  <div class="tr1">3 329 <span>на 24 місяці</span></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="headline3">Одним платежом</div>
+                <div class="row">
+                  <div class="group">
+                    <div class="pr2">75 900</div>
+                    <div class="tr2">79 900</div>
+                  </div>
+                  <div class="cost">-5%</div>
+                </div>
+              </div>
+            </div>
+            <ul class="list">
+              <li>9 модулів за 6 тижнів</li>
+              <li>Вебінари з експертами</li>
+              <li>Практичні завдання</li>
+              <li>Посвідчення про підвищення кваліфікації за підсумками навчання</li>
+              <li>Безстроковий доступ до матеріалів</li>
+              <li>Груповий чат з експертами та координаторами курсу</li>
+              <li>Професійне ком'юніті</li>
+            </ul>
+            <button>Вибрати</button>
+          </div>
+          <div class="column">
+            <h5>Колеги</h5>
+            <div class="headline3">Діє при оплаті навчання групи з трьох осіб</div>
+            <div class="price">
+              <div class="col">
+                <div class="headline3">9 модулів за 6 тижнів</div>
+                <div class="group">
+                  <div class="pr1">3 329 <span>/місяць</span></div>
+                  <div class="tr1">3 329 <span>на 24 місяці</span></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="headline3">Одним платежом</div>
+                <div class="row">
+                  <div class="group">
+                    <div class="pr2">75 900</div>
+                    <div class="tr2">79 900</div>
+                  </div>
+                  <div class="cost">-5%</div>
+                </div>
+              </div>
+            </div>
+            <ul class="list">
+              <li>9 модулів за 6 тижнів</li>
+              <li>Вебінари з експертами</li>
+              <li>Практичні завдання</li>
+              <li>Посвідчення про підвищення кваліфікації за підсумками навчання</li>
+              <li>Безстроковий доступ до матеріалів</li>
+              <li>Груповий чат з експертами та координаторами курсу</li>
+              <li>Професійне ком'юніті</li>
+            </ul>
+            <button>Вибрати</button>
+          </div>
+          <div class="column">
+            <h5>Колеги</h5>
+            <div class="headline3">Діє при оплаті навчання групи з трьох осіб</div>
+            <div class="price">
+              <div class="col">
+                <div class="headline3">9 модулів за 6 тижнів</div>
+                <div class="group">
+                  <div class="pr1">3 329 <span>/місяць</span></div>
+                  <div class="tr1">3 329 <span>на 24 місяці</span></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="headline3">Одним платежом</div>
+                <div class="row">
+                  <div class="group">
+                    <div class="pr2">75 900</div>
+                    <div class="tr2">79 900</div>
+                  </div>
+                  <div class="cost">-5%</div>
+                </div>
+              </div>
+            </div>
+            <ul class="list">
+              <li>9 модулів за 6 тижнів</li>
+              <li>Вебінари з експертами</li>
+              <li>Практичні завдання</li>
+              <li>Посвідчення про підвищення кваліфікації за підсумками навчання</li>
+              <li>Безстроковий доступ до матеріалів</li>
+              <li>Груповий чат з експертами та координаторами курсу</li>
+              <li>Професійне ком'юніті</li>
+            </ul>
+            <button>Вибрати</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="reviews" id="reviews">
+        <h2>Відгуки</h2>
+        <div class="carousel-container">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="carousel"></div>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="dots"></div>
+      </article>
+
+
+      <section class="contact" id="contact">
+        <h2>Зв'язок з нами</h2>
+        <div class="wrapper">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Є питання? <br>Зв'яжіться з нами!</h3>
+              <p>
+                Наша команда готова допомогти вам з будь-якими питаннями, які у вас можуть виникнути.
+                Просто заповніть форму нижче і ми з вами зв’яжемось протягом 24 годин.
+              </p>
+              <img src="img/home.png" alt="">
+            </div>
+            <form class="contact-form">
+              <input type="text" placeholder="Ваше ім'я*" required>
+              <input type="email" placeholder="Ваш email*" required>
+              <input type="tel" placeholder="Ваш номер телефону*" required>
+              <p class="privacy">
+                Залишаючи свої дані, я погоджуюся на обробку персональних даних відповідно до Політики конфіденційності.
+              </p>
+              <button type="submit">ВІДПРАВИТИ</button>
+            </form>
+          </div>
+          <img class="image" src="img/contact.png" alt="">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="column">
+          <svg width="74" height="29" viewBox="0 0 74 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.56 7H33.92V18.88H39.48V21H31.56V7ZM40.3089 16.4C40.3089 15.4533 40.5222 14.62 40.9489 13.9C41.3889 13.18 41.9822 12.62 42.7289 12.22C43.4756 11.8067 44.3222 11.6 45.2689 11.6C46.2156 11.6 47.0556 11.8067 47.7889 12.22C48.5356 12.62 49.1289 13.18 49.5689 13.9C50.0089 14.62 50.2289 15.4533 50.2289 16.4C50.2289 17.3333 50.0089 18.1667 49.5689 18.9C49.1289 19.62 48.5356 20.1867 47.7889 20.6C47.0556 21 46.2156 21.2 45.2689 21.2C44.3222 21.2 43.4756 21 42.7289 20.6C41.9822 20.1867 41.3889 19.62 40.9489 18.9C40.5222 18.1667 40.3089 17.3333 40.3089 16.4ZM42.5289 16.4C42.5289 16.9733 42.6489 17.48 42.8889 17.92C43.1289 18.3467 43.4556 18.6867 43.8689 18.94C44.2822 19.18 44.7489 19.3 45.2689 19.3C45.7756 19.3 46.2356 19.18 46.6489 18.94C47.0756 18.6867 47.4089 18.3467 47.6489 17.92C47.8889 17.48 48.0089 16.9733 48.0089 16.4C48.0089 15.8267 47.8889 15.32 47.6489 14.88C47.4089 14.44 47.0756 14.1 46.6489 13.86C46.2356 13.62 45.7756 13.5 45.2689 13.5C44.7489 13.5 44.2822 13.62 43.8689 13.86C43.4556 14.1 43.1289 14.44 42.8889 14.88C42.6489 15.32 42.5289 15.8267 42.5289 16.4ZM51.7584 21.62H53.8984C53.9118 22.0333 54.0251 22.4067 54.2384 22.74C54.4651 23.0733 54.7718 23.3333 55.1584 23.52C55.5451 23.7067 55.9918 23.8 56.4984 23.8C56.9518 23.8 57.3851 23.6933 57.7984 23.48C58.2118 23.2667 58.5451 22.94 58.7984 22.5C59.0651 22.06 59.1984 21.4933 59.1984 20.8V11.8H61.3184V20.8C61.3184 21.9067 61.0918 22.82 60.6384 23.54C60.1984 24.26 59.6184 24.7933 58.8984 25.14C58.1784 25.5 57.3984 25.68 56.5584 25.68C55.5584 25.68 54.7051 25.5067 53.9984 25.16C53.2918 24.8267 52.7451 24.3533 52.3584 23.74C51.9851 23.1267 51.7851 22.42 51.7584 21.62ZM51.5784 16.36C51.5784 15.3333 51.7851 14.4733 52.1984 13.78C52.6118 13.0733 53.1584 12.5333 53.8384 12.16C54.5318 11.7867 55.2718 11.6 56.0584 11.6C56.8318 11.6 57.5051 11.7933 58.0784 12.18C58.6651 12.5533 59.1251 13.0933 59.4584 13.8C59.8051 14.5067 59.9784 15.36 59.9784 16.36C59.9784 17.3467 59.8051 18.1933 59.4584 18.9C59.1251 19.6067 58.6651 20.1533 58.0784 20.54C57.5051 20.9133 56.8318 21.1 56.0584 21.1C55.2718 21.1 54.5318 20.9133 53.8384 20.54C53.1584 20.1667 52.6118 19.6267 52.1984 18.92C51.7851 18.2133 51.5784 17.36 51.5784 16.36ZM53.8184 16.36C53.8184 16.9733 53.9451 17.4933 54.1984 17.92C54.4518 18.3467 54.7851 18.6733 55.1984 18.9C55.6251 19.1133 56.0851 19.22 56.5784 19.22C56.9918 19.22 57.3984 19.1133 57.7984 18.9C58.2118 18.6867 58.5451 18.3667 58.7984 17.94C59.0651 17.5 59.1984 16.9733 59.1984 16.36C59.1984 15.88 59.1184 15.4667 58.9584 15.12C58.8118 14.76 58.6118 14.46 58.3584 14.22C58.1051 13.9667 57.8184 13.78 57.4984 13.66C57.1918 13.54 56.8851 13.48 56.5784 13.48C56.0851 13.48 55.6251 13.5933 55.1984 13.82C54.7851 14.0333 54.4518 14.3533 54.1984 14.78C53.9451 15.2067 53.8184 15.7333 53.8184 16.36ZM63.2972 16.4C63.2972 15.4533 63.5105 14.62 63.9372 13.9C64.3772 13.18 64.9705 12.62 65.7172 12.22C66.4639 11.8067 67.3105 11.6 68.2572 11.6C69.2039 11.6 70.0439 11.8067 70.7772 12.22C71.5239 12.62 72.1172 13.18 72.5572 13.9C72.9972 14.62 73.2172 15.4533 73.2172 16.4C73.2172 17.3333 72.9972 18.1667 72.5572 18.9C72.1172 19.62 71.5239 20.1867 70.7772 20.6C70.0439 21 69.2039 21.2 68.2572 21.2C67.3105 21.2 66.4639 21 65.7172 20.6C64.9705 20.1867 64.3772 19.62 63.9372 18.9C63.5105 18.1667 63.2972 17.3333 63.2972 16.4ZM65.5172 16.4C65.5172 16.9733 65.6372 17.48 65.8772 17.92C66.1172 18.3467 66.4439 18.6867 66.8572 18.94C67.2705 19.18 67.7372 19.3 68.2572 19.3C68.7639 19.3 69.2239 19.18 69.6372 18.94C70.0639 18.6867 70.3972 18.3467 70.6372 17.92C70.8772 17.48 70.9972 16.9733 70.9972 16.4C70.9972 15.8267 70.8772 15.32 70.6372 14.88C70.3972 14.44 70.0639 14.1 69.6372 13.86C69.2239 13.62 68.7639 13.5 68.2572 13.5C67.7372 13.5 67.2705 13.62 66.8572 13.86C66.4439 14.1 66.1172 14.44 65.8772 14.88C65.6372 15.32 65.5172 15.8267 65.5172 16.4Z"
+              fill="white" />
+            <rect width="16" height="16" rx="4" fill="#C07FF2" />
+            <rect x="8" y="8" width="16" height="16" rx="8" fill="#09AFF4" />
+          </svg>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus facere modi possimus dignissimos,
+            aliquam nobis eaque? Voluptatem magnam quisquam rem.</p>
+          <p>&copy; 2024 Created by: Martin</p>
+        </div>
+        <div class="column"></div>
+        <div class="column">
+          <div></div>
+          <div class="cont">
+            <p>Contact Information</p>
+            <div class="email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_10026_5469)">
+                  <path
+                    d="M19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3 7L12 13L21 7" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_10026_5469">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <a>example@support.com</a>
+            </div>
+            <div class="location">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_10026_5472)">
+                  <path d="M18 6V6.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M18 13L14.5 7.99997C14.1631 7.391 13.9909 6.70466 14.0004 6.00876C14.0099 5.31287 14.2008 4.63149 14.5543 4.03197C14.9077 3.43245 15.4115 2.93552 16.0158 2.59029C16.6201 2.24506 17.304 2.06348 18 2.06348C18.696 2.06348 19.3799 2.24506 19.9842 2.59029C20.5885 2.93552 21.0923 3.43245 21.4457 4.03197C21.7992 4.63149 21.9901 5.31287 21.9996 6.00876C22.0091 6.70466 21.8369 7.391 21.5 7.99997L18 13Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M10.5 4.75L9 4L3 7V20L9 17L15 20L21 17V15" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9 4V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15 15V20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_10026_5472">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <a>5 xyz st., adc, vallhalla</a>
+            </div>
+
+          </div>
+          <div class="licence">
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
