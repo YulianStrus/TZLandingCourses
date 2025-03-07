@@ -1,6 +1,6 @@
 const speakers = [
   {
-    image: "img/speaker1.png",
+    image: "img/speaker1.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -17,7 +17,7 @@ const speakers = [
     },
   },
   {
-    image: "img/speaker2.png",
+    image: "img/speaker2.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -34,7 +34,7 @@ const speakers = [
     },
   },
   {
-    image: "img/speaker3.png",
+    image: "img/speaker3.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -53,25 +53,25 @@ const speakers = [
 ];
 const learnData = [
   {
-    image: "img/learn1.png",
+    image: "img/learn1.webp",
     link: "#",
     title: "Знайомство з платформою1",
     text: "Lorem ipsum dolor sit amet consectetur. Felis amet consectetur sollicitudin at aliquam tincidunt laoreet auctor elit. Lectus ipsum sapien id turpis elit cras ac. Velit risus nisl ut dictum venenatis mauris faucibus. Aliquam vehicula gravida fermentum in sodales fringilla mi at. Turpis volutpat parturient elit blandit proin magna pretium vestibulum elit. A massa adipiscing pellentesque tempor ac vel.",
   },
   {
-    image: "img/learn2.png",
+    image: "img/learn2.webp",
     link: "#",
     title: "Знайомство з платформою2",
     text: "Lorem ipsum dolor sit amet consectetur. Felis amet consectetur sollicitudin at aliquam tincidunt laoreet auctor elit. Lectus ipsum sapien id turpis elit cras ac. Velit risus nisl ut dictum venenatis mauris faucibus. Aliquam vehicula gravida fermentum in sodales fringilla mi at. Turpis volutpat parturient elit blandit proin magna pretium vestibulum elit. A massa adipiscing pellentesque tempor ac vel.",
   },
   {
-    image: "img/learn3.png",
+    image: "img/learn3.webp",
     link: "#",
     title: "Знайомство з платформою3",
     text: "Lorem ipsum dolor sit amet consectetur. Felis amet consectetur sollicitudin at aliquam tincidunt laoreet auctor elit. Lectus ipsum sapien id turpis elit cras ac. Velit risus nisl ut dictum venenatis mauris faucibus. Aliquam vehicula gravida fermentum in sodales fringilla mi at. Turpis volutpat parturient elit blandit proin magna pretium vestibulum elit. A massa adipiscing pellentesque tempor ac vel.",
   },
   {
-    image: "img/learn4.png",
+    image: "img/learn4.webp",
     link: "#",
     title: "Знайомство з платформою4",
     text: "Lorem ipsum dolor sit amet consectetur. Felis amet consectetur sollicitudin at aliquam tincidunt laoreet auctor elit. Lectus ipsum sapien id turpis elit cras ac. Velit risus nisl ut dictum venenatis mauris faucibus. Aliquam vehicula gravida fermentum in sodales fringilla mi at. Turpis volutpat parturient elit blandit proin magna pretium vestibulum elit. A massa adipiscing pellentesque tempor ac vel.",
@@ -79,7 +79,7 @@ const learnData = [
 ];
 const students = [
   {
-    image: "img/student1.png",
+    image: "img/student1.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -96,7 +96,7 @@ const students = [
     },
   },
   {
-    image: "img/student2.png",
+    image: "img/student2.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -113,7 +113,7 @@ const students = [
     },
   },
   {
-    image: "img/student3.png",
+    image: "img/student3.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -130,7 +130,7 @@ const students = [
     },
   },
   {
-    image: "img/student4.png",
+    image: "img/student4.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -147,7 +147,7 @@ const students = [
     },
   },
   {
-    image: "img/student5.png",
+    image: "img/student5.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -164,7 +164,7 @@ const students = [
     },
   },
   {
-    image: "img/student6.png",
+    image: "img/student6.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -181,7 +181,7 @@ const students = [
     },
   },
   {
-    image: "img/student7.png",
+    image: "img/student7.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -198,7 +198,7 @@ const students = [
     },
   },
   {
-    image: "img/student8.png",
+    image: "img/student8.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -215,7 +215,7 @@ const students = [
     },
   },
   {
-    image: "img/student9.png",
+    image: "img/student9.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -232,7 +232,7 @@ const students = [
     },
   },
   {
-    image: "img/student10.png",
+    image: "img/student10.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -249,7 +249,7 @@ const students = [
     },
   },
   {
-    image: "img/student11.png",
+    image: "img/student11.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -266,7 +266,7 @@ const students = [
     },
   },
   {
-    image: "img/student12.png",
+    image: "img/student12.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -285,7 +285,7 @@ const students = [
 ];
 const cources = [
   {
-    image: "img/cource1.png",
+    image: "img/cource1.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -302,7 +302,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource2.png",
+    image: "img/cource2.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -319,7 +319,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource3.png",
+    image: "img/cource3.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -336,7 +336,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource4.png",
+    image: "img/cource4.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -353,7 +353,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource5.png",
+    image: "img/cource5.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -370,7 +370,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource6.png",
+    image: "img/cource6.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -387,7 +387,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource7.png",
+    image: "img/cource7.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
@@ -404,7 +404,7 @@ const cources = [
     },
   },
   {
-    image: "img/cource8.png",
+    image: "img/cource8.webp",
     texts: {
       "Web Development":
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.",
