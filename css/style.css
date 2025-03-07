@@ -645,9 +645,11 @@ main .cources .wrapper .right-column .cource-accord .accordion-content .close-bt
   cursor: pointer;
   text-align: center;
   font-size: 18px;
+  transition: 0.3s;
+  z-index: 1;
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .close-btn:hover {
-  background-color: #000000;
+  background: #333;
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .divider-line {
   height: 8px;

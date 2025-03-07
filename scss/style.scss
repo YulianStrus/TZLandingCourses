@@ -713,9 +713,11 @@ main {
                             cursor: pointer;
                             text-align: center;
                             font-size: 18px;
-
+                            transition: 0.3s;
+                            z-index: 1;
+            
                             &:hover {
-                                background-color: $black;
+                                background: #333;
                             }
                         }
 
