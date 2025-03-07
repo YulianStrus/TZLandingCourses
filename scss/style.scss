@@ -586,6 +586,7 @@ main {
                 right: -75px;
                 bottom: 0;
                 height: 437px;
+                overflow: hidden;
             }
         }
 
@@ -717,7 +718,8 @@ main {
                             z-index: 1;
             
                             &:hover {
-                                background: #333;
+                                color:$white;
+                                background: #000;
                             }
                         }
 
@@ -1269,15 +1271,14 @@ footer {
 
             a {
                 display: block;
+                svg{
+                    margin-right: 15px;
+                }
             }
 
             .email,
             .location {
                 display: inline-flex;
-
-                a {
-                    margin-left: 12px;
-                }
             }
         }
 

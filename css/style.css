@@ -537,6 +537,7 @@ main .comunity .wrapper2 img {
   right: -75px;
   bottom: 0;
   height: 437px;
+  overflow: hidden;
 }
 main .career .wrapper2 img,
 main .comunity .wrapper2 img {
@@ -649,7 +650,8 @@ main .cources .wrapper .right-column .cource-accord .accordion-content .close-bt
   z-index: 1;
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .close-btn:hover {
-  background: #333;
+  color: #FFFFFF;
+  background: #000;
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .divider-line {
   height: 8px;
@@ -1101,13 +1103,12 @@ footer .column .cont p {
 footer .column .cont a {
   display: block;
 }
+footer .column .cont a svg {
+  margin-right: 15px;
+}
 footer .column .cont .email,
 footer .column .cont .location {
   display: inline-flex;
-}
-footer .column .cont .email a,
-footer .column .cont .location a {
-  margin-left: 12px;
 }
 footer .column .licence {
   display: inline-flex;
