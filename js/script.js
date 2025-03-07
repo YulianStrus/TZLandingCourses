@@ -678,16 +678,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleAccordion = document.getElementById("toggleAccordion");
 
   if (!accordionContainer || !toggleAccordion) {
-    console.error("Помилка: Не знайдено елементи акордеона.");
     return;
   }
 
   toggleAccordion.addEventListener("click", function () {
-    console.log("Клікнуто на +");
     accordionContainer.classList.toggle("show");
   });
 
-  // Закриття акордеона при кліку поза ним
   document.addEventListener("click", function (event) {
     if (
       !toggleAccordion.contains(event.target) &&
@@ -697,7 +694,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Генеруємо контент
   modules.forEach((module, index) => {
     const block = document.createElement("div");
     block.classList.add("text-block");
@@ -713,7 +709,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     accordionContainer.appendChild(block);
 
-    // Додаємо роздільник, але не після останнього блоку
     if (index < modules.length) {
       const divider = document.createElement("div");
       divider.classList.add("divider-line");
@@ -721,7 +716,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Додаємо кнопку "Закрити" в кінець акордеона
   const closeButton = document.createElement("button");
   closeButton.id = "closeAccordion";
   closeButton.classList.add("close-btn");
@@ -729,12 +723,9 @@ document.addEventListener("DOMContentLoaded", function () {
   accordionContainer.appendChild(closeButton);
 
   closeButton.addEventListener("click", function () {
-    console.log("Клікнуто на 'Закрити'");
     accordionContainer.classList.remove("show");
   });
-  // Додаємо відкриття/закриття
   toggleAccordion.addEventListener("click", function () {
-    console.log("Клікнуто на +"); // Перевірка в консолі
     accordionContainer.classList.toggle("show");
   });
 });
@@ -785,7 +776,7 @@ function createTestimonials() {
 }
 
 function updateCarousel() {
-  const offset = -(index * 33.33); // Зміщення на 33.33% (один блок)
+  const offset = -(index * 33.33);
   carousel.style.transform = `translateX(${offset}% )`;
 }
 
