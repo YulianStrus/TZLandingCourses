@@ -14,7 +14,6 @@ $purple: #c07ff2;
 $l_blue: #74b7fe;
 $blue: #09aff4;
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
 
 *,
 *::before,
@@ -25,7 +24,8 @@ $blue: #09aff4;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
 }
 
 ul,
