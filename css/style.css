@@ -1066,7 +1066,6 @@ main .contact::after {
   bottom: 0;
   width: 200px;
   height: 200px;
-  background: url("/path-to/contact.png") no-repeat center/contain;
 }
 
 footer {
