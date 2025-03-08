@@ -786,3 +786,28 @@ function moveSlide(direction) {
   updateCarousel();
 }
 createTestimonials();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("nav");
+  const menuClose = document.querySelector(".menu-close");
+  const overlay = document.createElement("div");
+
+  overlay.classList.add("menu-overlay");
+  document.body.appendChild(overlay);
+
+  menuToggle.addEventListener("click", function () {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  menuClose.addEventListener("click", function () {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", function () {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});

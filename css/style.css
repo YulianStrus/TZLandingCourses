@@ -156,6 +156,22 @@ header nav ul a:active {
   background: #e2e6ee;
   border-radius: 40px;
 }
+header .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 99;
+}
+header .menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 header .home {
   position: relative;
   display: flex;
@@ -1114,6 +1130,143 @@ footer .column .licence {
 }
 footer .column .licence p {
   margin-right: 32px;
+}
+
+/* ====== Адаптивні стилі для мобільних (320px - 768px) ====== */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+  /* ====== Головна секція ====== */
+  .home {
+    text-align: center;
+    padding: 40px 0;
+  }
+  .home .row {
+    flex-direction: column;
+  }
+  .home h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+  .home .headline1 {
+    font-size: 16px;
+  }
+  .home button {
+    width: 100%;
+    max-width: 250px;
+  }
+  /* ====== Навігація (бургер-меню) ====== */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #E4E8F0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: left 0.3s ease;
+  }
+  nav.active {
+    left: 0;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  nav ul li.active a {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+  }
+  .menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  /* ====== Блок "Кому буде корисний курс" ====== */
+  .how .grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* ====== Спікери ====== */
+  .speakers .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .speakers .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  /* ====== Кейси учнів ====== */
+  .students .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* ====== Центр кар'єри ====== */
+  .career .wrapper1,
+  .career .wrapper2 {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* ====== Програма курсу ====== */
+  .cources .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* ====== Тарифи навчання ====== */
+  .tariffs .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tariffs .column {
+    width: 100%;
+    max-width: 320px;
+  }
+  /* ====== Відгуки ====== */
+  .reviews .carousel-container {
+    flex-direction: column;
+  }
+  /* ====== Форма контактів ====== */
+  .contact .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact .image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
