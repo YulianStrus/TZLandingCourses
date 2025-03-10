@@ -148,10 +148,14 @@ h5 {
     letter-spacing: 0;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 header {
 
-    .menu-toggle {
-        display: none !important;
+    .logo {
+        display: none;
     }
 
     nav {
@@ -161,25 +165,26 @@ header {
         width: 1280px;
         padding: 20px;
         z-index: 100;
-        border-radius: 40px;
+        // border-radius: 40px;
 
         ul {
             justify-content: space-between;
 
             li {
-                margin: 0 20px;
-                display: inline-flex;
-            }
-
-            a {
                 color: $white;
-                text-decoration: none;
+                margin: 0;
+                display: inline-flex;
+                padding: 8px 32px;
 
-                &:active {
+                &.active {
                     color: $black;
                     background: $color_e2;
                     border-radius: 40px;
                 }
+            }
+
+            a {
+                text-decoration: none;
             }
         }
     }
@@ -228,7 +233,8 @@ header {
             flex: 1 0 50%;
 
             h1 {
-                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-bottom: 40px;
             }
 
             p {
@@ -1316,13 +1322,13 @@ footer {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 0 16px;
+        padding: 0;
     }
 
     /* ====== Головна секція ====== */
     .home {
         text-align: center;
-        padding: 40px 0;
+        padding: 0;
 
         .row {
             flex-direction: column;
@@ -1349,8 +1355,9 @@ footer {
         display: block;
         cursor: pointer;
         position: fixed;
+        color: $white;
         top: 20px;
-        left: 20px;
+        right: 20px;
         z-index: 100;
     }
 
@@ -1358,20 +1365,32 @@ footer {
         position: fixed;
         top: 0;
         left: -100%;
-        width: 80%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 50%;
         height: 100vh;
         background: #E4E8F0;
         box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
         padding: 30px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         gap: 20px;
         transition: left 0.3s ease;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 
     nav.active {
         left: 0;
+
+        .logo {
+            width: 24px;
+            height: 18px;
+            display: flex;
+            font-weight: 700;
+        }
     }
 
     nav ul {
@@ -1382,6 +1401,7 @@ footer {
 
     nav ul li {
         list-style: none;
+        padding: 8px 32px;
     }
 
     nav ul li a {
@@ -1394,7 +1414,6 @@ footer {
     nav ul li.active a {
         background: black;
         color: white;
-        padding: 10px 15px;
         border-radius: 20px;
     }
 
@@ -1407,7 +1426,9 @@ footer {
     }
 
     /* ====== Блок "Кому буде корисний курс" ====== */
-    .how .grid {
+    main .how .grid {
+        grid-template-columns: 1fr;
+        /* одна колонка */
         flex-direction: column;
         gap: 20px;
     }
@@ -1425,6 +1446,12 @@ footer {
         gap: 10px;
     }
 
+    .learn {
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+
     /* ====== Кейси учнів ====== */
     .students .wrapper {
         flex-direction: column;
@@ -1439,13 +1466,25 @@ footer {
     }
 
     /* ====== Програма курсу ====== */
-    .cources .wrapper {
-        flex-direction: column;
-        text-align: center;
+    main {
+
+        .speakers,
+        .students,
+        .cources {
+            .wrapper {
+                flex-direction: column;
+                text-align: center;
+
+                .left-column,
+                .right-column {
+                    margin: 0;
+                }
+            }
+        }
     }
 
     /* ====== Тарифи навчання ====== */
-    .tariffs .wrapper {
+    main .tariffs .wrapper {
         flex-direction: column;
         align-items: center;
     }
