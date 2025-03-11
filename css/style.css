@@ -62,73 +62,71 @@ body {
 h1 {
   font-family: "Jost", sans-serif;
   font-weight: 600;
-  font-size: 48pt;
+  font-size: clamp(24px, 4vw, 48px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 h2 {
   font-family: "Jost", sans-serif;
   font-weight: 700;
-  font-size: 40pt;
+  font-size: clamp(20px, 3.33vw, 40px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 h3 {
   font-family: "Jost", sans-serif;
   font-weight: 800;
-  font-size: 32pt;
+  font-size: clamp(16px, 2.67vw, 32px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 h4 {
   font-family: "Jost", sans-serif;
   font-weight: 700;
-  font-size: 28pt;
+  font-size: clamp(16px, 2.33vw, 28px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 h5 {
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  font-size: 22pt;
+  font-size: clamp(14px, 1.72vw, 22px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 .button {
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  font-size: 22pt;
+  font-size: clamp(10px, 1.1vw, 22px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 .headline1 {
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  font-size: 18pt;
+  font-size: clamp(14px, 1.4vw, 18px);
   line-height: 150%;
-  letter-spacing: 0;
 }
 
 .headline2 {
   font-family: "Jost", sans-serif;
   font-weight: 600;
-  font-size: 16pt;
+  font-size: clamp(11px, 1.17vw, 16px);
   line-height: 120%;
-  letter-spacing: 0;
 }
 
 .headline3 {
   font-family: "Jost", sans-serif;
   font-weight: 600;
-  font-size: 14pt;
+  font-size: clamp(14px, 1.1vw, 14px);
   line-height: 150%;
-  letter-spacing: 0;
+}
+
+p {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: clamp(10px, 1.1vw, 16px);
+  line-height: 120%;
 }
 
 .menu-toggle {
@@ -145,6 +143,9 @@ header nav {
   width: 1280px;
   padding: 20px;
   z-index: 100;
+}
+header nav .logo {
+  display: none;
 }
 header nav ul {
   justify-content: space-between;
@@ -185,6 +186,7 @@ header .home {
   color: #FFFFFF;
   width: 100%;
   background-size: auto;
+  flex-direction: column;
 }
 header .home img {
   position: absolute;
@@ -192,24 +194,31 @@ header .home img {
   border-bottom-right-radius: 72px;
   border-bottom-left-radius: 72px;
 }
+header .home .background {
+  height: 110%;
+}
 header .home .row {
   display: flex;
   flex-direction: row;
   margin: auto 100px;
 }
-header .home .column {
+header .home .column1,
+header .home .column2 {
   padding-top: 40px;
   position: relative;
   flex: 1 0 50%;
 }
-header .home .column h1 {
+header .home .column1 .home-text h1,
+header .home .column2 .home-text h1 {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-header .home .column p {
+header .home .column1 .home-text p,
+header .home .column2 .home-text p {
   margin-bottom: 80px;
 }
-header .home .column button {
+header .home .column1 button,
+header .home .column2 button {
   width: 232px;
   height: 54px;
   border-radius: 40px;
@@ -225,34 +234,37 @@ header .home .column button {
   font-size: 16px;
   font-weight: bold;
 }
-header .home .column img {
+header .home .col-img1 img {
   position: absolute;
   width: 500px;
   right: 0;
-  bottom: 0;
+  bottom: -100px;
 }
-header .home .column img:first-child {
+header .home .col-img1 img:first-child {
   left: 0;
   top: 0;
   width: 430px;
 }
-header .home .column .person {
+header .home .col-img2 .person {
   display: flex;
-  position: absolute;
-  width: 400px;
+  width: 100%;
   height: 50px;
   right: 10px;
   bottom: 10px;
+  justify-content: flex-end;
 }
-header .home .column .person img {
-  position: absolute;
+header .home .col-img2 .person .person-img {
+  position: relative;
   width: 168px;
   z-index: 5;
   border-radius: 0;
   bottom: 0;
 }
-header .home .column .person p {
-  position: absolute;
+header .home .col-img2 .person .person-img img {
+  width: 100%;
+  border-radius: 0;
+}
+header .home .col-img2 .person p {
   width: 205px;
   margin: 5px 0;
   right: 0;
@@ -304,6 +316,7 @@ main .how .left-column {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #fff;
 }
 main .how .left-column p {
   margin-top: 80px;
@@ -314,7 +327,7 @@ main .how .right-column {
   gap: 20px;
 }
 main .how .block {
-  border: 1px solid #1a1a1a;
+  border: 1px solid #E9E9E9;
   border-radius: 20px;
   padding: 20px;
 }
@@ -452,6 +465,7 @@ main .learn .wrapper .left-column img#learnImage {
 }
 main .learn .wrapper .left-column a {
   display: flex;
+  align-items: center;
   justify-content: center;
   height: 46;
   margin: 0 25px 25px 25px;
@@ -462,9 +476,19 @@ main .learn .wrapper .left-column a {
   padding: 11px 0;
   font-family: Jost;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 22px;
   letter-spacing: 0%;
+}
+main .learn .wrapper .left-column a svg {
+  width: 22px;
+  height: 22px;
+}
+main .learn .wrapper .left-column p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
 }
 main .learn .wrapper .right-column {
   display: flex;
@@ -523,14 +547,14 @@ main .comunity .wrapper1 .left,
 main .comunity .wrapper2 .left {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
   margin: 0 0 0 50px;
 }
 main .career .wrapper1 .left .text,
 main .career .wrapper2 .left .text,
 main .comunity .wrapper1 .left .text,
 main .comunity .wrapper2 .left .text {
-  max-width: 60%;
+  max-width: 100%;
   margin-bottom: 40px;
 }
 main .career .wrapper1 .left .blockButton button,
@@ -553,14 +577,22 @@ main .comunity .wrapper2 .left .blockButton button:hover {
   background-color: #FFFFFF;
   color: #000000;
 }
-main .career .wrapper1 img,
-main .career .wrapper2 img,
-main .comunity .wrapper1 img,
-main .comunity .wrapper2 img {
-  position: absolute;
-  right: -75px;
-  bottom: 0;
+main .career .wrapper1 .image,
+main .career .wrapper2 .image,
+main .comunity .wrapper1 .image,
+main .comunity .wrapper2 .image {
+  position: relative;
   height: 437px;
+}
+main .career .wrapper1 .image img,
+main .career .wrapper2 .image img,
+main .comunity .wrapper1 .image img,
+main .comunity .wrapper2 .image img {
+  position: absolute;
+  width: 120%;
+  height: 90%;
+  right: -65px;
+  bottom: 0;
   overflow: hidden;
 }
 main .career .wrapper2 img,
@@ -679,15 +711,10 @@ main .cources .wrapper .right-column .cource-accord .accordion-content .close-bt
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .divider-line {
   height: 8px;
-  /* Висота смуги */
   background: black;
-  /* Чорний колір */
   margin: 0 auto;
-  /* Відступи зверху і знизу */
   width: 90%;
-  /* Ширина смуги */
   border-radius: 10px;
-  /* Закруглені краї */
   position: relative;
 }
 main .cources .wrapper .right-column .cource-accord .accordion-content .divider-line::before, main .cources .wrapper .right-column .cource-accord .accordion-content .divider-line::after {
@@ -928,7 +955,6 @@ main .reviews .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 170%;
-  /* Визначаємо точну ширину */
 }
 main .reviews .testimonial {
   width: 34%;
@@ -967,7 +993,6 @@ main .reviews .testimonial .role {
 }
 main .reviews .testimonial::before {
   content: "“";
-  /* Юнікод для лапок */
   font-size: 100px;
   color: white;
   display: block;
@@ -1000,6 +1025,23 @@ main .reviews .prev {
 }
 main .reviews .next {
   right: 15px;
+}
+main .reviews .dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+main .reviews .dot {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+main .reviews .dot.active {
+  background-color: black;
 }
 main .contact .wrapper {
   border-radius: 40px;
@@ -1103,6 +1145,7 @@ footer {
 footer .row {
   display: flex;
   height: 250px;
+  justify-content: space-between;
 }
 footer .column {
   display: flex;
@@ -1133,6 +1176,9 @@ footer .column .cont .email,
 footer .column .cont .location {
   display: inline-flex;
 }
+footer .column .cont .copy {
+  display: none;
+}
 footer .column .licence {
   display: inline-flex;
 }
@@ -1140,13 +1186,11 @@ footer .column .licence p {
   margin-right: 32px;
 }
 
-/* ====== Адаптивні стилі для мобільних (320px - 768px) ====== */
 @media (max-width: 768px) {
   .container {
     width: 100%;
     padding: 0;
   }
-  /* ====== Головна секція ====== */
   .home {
     text-align: center;
     padding: 0;
@@ -1166,7 +1210,6 @@ footer .column .licence p {
     width: 100%;
     max-width: 250px;
   }
-  /* ====== Навігація (бургер-меню) ====== */
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -1174,18 +1217,25 @@ footer .column .licence p {
     color: #FFFFFF;
     top: 20px;
     right: 20px;
+    z-index: 1;
+  }
+  header .logo {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     z-index: 100;
   }
-  nav {
+  header nav {
     position: fixed;
-    top: 0;
     left: -100%;
     width: 100%;
     max-width: 50%;
     height: 100vh;
     background: #E4E8F0;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 70px 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1196,34 +1246,121 @@ footer .column .licence p {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  nav.active {
+  header nav.active {
     left: 0;
   }
-  nav.active .logo {
+  header nav.active .logo {
     width: 24px;
     height: 18px;
     display: flex;
     font-weight: 700;
   }
-  nav ul {
+  header nav.active ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  nav ul li {
+  header nav.active ul li {
     list-style: none;
-    padding: 8px 32px;
+    padding-left: 32px;
   }
-  nav ul li a {
+  header nav.active ul li a {
     text-decoration: none;
     color: black;
     font-weight: 600;
     font-size: 18px;
   }
-  nav ul li.active a {
+  header nav.active ul li.active {
     background: black;
-    color: white;
     border-radius: 20px;
+    padding: 8px 32px;
+    margin: 0;
+  }
+  header nav.active ul li.active a {
+    color: white;
+  }
+  header nav.active ul li.active a::after {
+    width: 20px;
+    height: 20px;
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHBzOi8vd3d3Lnd3dy5vcmcvMjAwMC9zdmciPg0KPHJlY3QgeD0iMC41IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0id2hpdGUiLz4NCjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMCIgcj0iMi41IiBmaWxsPSJibGFjayIvPjwvc3ZnPg==");
+    display: inline-block;
+  }
+  header .home {
+    height: 100vh;
+    justify-content: space-between;
+  }
+  header .home h1 {
+    padding: 0;
+  }
+  header .home .background {
+    height: 100%;
+  }
+  header .home .row {
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px;
+  }
+  header .home .rev {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  header .home .column1,
+  header .home .column2 {
+    display: flex;
+    padding-top: 40px;
+    position: relative;
+    flex: 1 0 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .home .column1 .home-text h1,
+  header .home .column2 .home-text h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+  }
+  header .home .column1 .home-text p,
+  header .home .column2 .home-text p {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  header .home .column2 {
+    padding-top: 20px;
+  }
+  header .home .col-img1 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+  }
+  header .home .col-img1 img {
+    width: 200px;
+    top: 25%;
+  }
+  header .home .col-img2 {
+    justify-content: flex-end;
+  }
+  header .home .col-img2 .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрує все горизонтально */
+    justify-content: center; /* Центрує все вертикально */
+    height: 100%; /* Або конкретна висота, якщо потрібно */
+  }
+  header .home .col-img2 .person .person-img {
+    width: 90px;
+    left: -41px;
+    margin-bottom: 30px; /* Невеликий відступ між зображенням і текстом */
+  }
+  header .home .col-img2 .person p {
+    text-align: center; /* Центрує текст */
+    margin: 0;
   }
   .menu-close {
     position: absolute;
@@ -1232,75 +1369,439 @@ footer .column .licence p {
     cursor: pointer;
     font-size: 24px;
   }
-  /* ====== Блок "Кому буде корисний курс" ====== */
+  main {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  main section {
+    margin-bottom: 80px;
+  }
   main .how .grid {
+    position: relative;
     grid-template-columns: 1fr;
-    /* одна колонка */
     flex-direction: column;
     gap: 20px;
   }
-  /* ====== Спікери ====== */
-  .speakers .wrapper {
-    flex-direction: column;
-    text-align: center;
+  main .how .grid .left-column {
+    width: 100%;
+    padding: 30px 17px;
   }
-  .speakers .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  main .how .grid .left-column h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
   }
-  .learn .wrapper {
-    flex-direction: column;
+  main .how .grid .left-column p {
+    margin-top: 10px;
+    font-size: 11px;
   }
-  /* ====== Кейси учнів ====== */
-  .students .wrapper {
-    flex-direction: column;
-    text-align: center;
+  main .how .grid .block {
+    border: 1px solid #E9E9E9;
+    border-radius: 20px;
+    padding: 22px 9px 22px 12px;
   }
-  /* ====== Центр кар'єри ====== */
-  .career .wrapper1,
-  .career .wrapper2 {
-    flex-direction: column;
-    text-align: center;
-  }
-  /* ====== Програма курсу ====== */
   main .speakers .wrapper,
   main .students .wrapper,
   main .cources .wrapper {
     flex-direction: column;
     text-align: center;
+    gap: 0;
   }
   main .speakers .wrapper .left-column,
-  main .speakers .wrapper .right-column,
   main .students .wrapper .left-column,
+  main .cources .wrapper .left-column {
+    margin: 0;
+    padding: 40px 20px 10px 20px;
+  }
+  main .speakers .wrapper .left-column img#speakerImage,
+  main .speakers .wrapper .left-column img#studentImage,
+  main .speakers .wrapper .left-column img#courceImage,
+  main .students .wrapper .left-column img#speakerImage,
+  main .students .wrapper .left-column img#studentImage,
+  main .students .wrapper .left-column img#courceImage,
+  main .cources .wrapper .left-column img#speakerImage,
+  main .cources .wrapper .left-column img#studentImage,
+  main .cources .wrapper .left-column img#courceImage {
+    border-radius: 20px;
+  }
+  main .speakers .wrapper .right-column,
   main .students .wrapper .right-column,
-  main .cources .wrapper .left-column,
   main .cources .wrapper .right-column {
     margin: 0;
+    padding: 0 24px 40px 24px;
   }
-  /* ====== Тарифи навчання ====== */
-  main .tariffs .wrapper {
+  main .speakers .wrapper .right-column .text-block,
+  main .students .wrapper .right-column .text-block,
+  main .cources .wrapper .right-column .text-block {
+    padding: 40px 36px;
+    text-align: left;
+    box-shadow: 4px 4px 0px 0px black, -4px 4px 0px 0px black;
+  }
+  main .speakers .wrapper .right-column .text-block h2,
+  main .students .wrapper .right-column .text-block h2,
+  main .cources .wrapper .right-column .text-block h2 {
+    font-size: 14px;
+  }
+  main .speakers .wrapper .right-column .text-block p,
+  main .students .wrapper .right-column .text-block p,
+  main .cources .wrapper .right-column .text-block p {
+    font-size: 10px;
+  }
+  main .speakers .wrapper .right-column .cource-accord .cource-head,
+  main .students .wrapper .right-column .cource-accord .cource-head,
+  main .cources .wrapper .right-column .cource-accord .cource-head {
+    font-size: 12px;
+  }
+  main .speakers .wrapper .right-column .cource-accord .pagination,
+  main .students .wrapper .right-column .cource-accord .pagination,
+  main .cources .wrapper .right-column .cource-accord .pagination {
+    width: 80%;
+    height: 25px;
+    padding: 0 10px;
+    display: flex;
+    background: #000000;
+    justify-content: space-around;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+  }
+  main .speakers .wrapper .right-column .cource-accord .accordion-container,
+  main .students .wrapper .right-column .cource-accord .accordion-container,
+  main .cources .wrapper .right-column .cource-accord .accordion-container {
+    margin: 0;
+  }
+  main .speakers .wrapper .right-column .cource-accord .accordion-content,
+  main .students .wrapper .right-column .cource-accord .accordion-content,
+  main .cources .wrapper .right-column .cource-accord .accordion-content {
+    margin: 0;
+  }
+  main .speakers .wrapper .right-column .cource-accord .accordion-content .buttons,
+  main .students .wrapper .right-column .cource-accord .accordion-content .buttons,
+  main .cources .wrapper .right-column .cource-accord .accordion-content .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  main .speakers .wrapper .right-column .cource-accord .accordion-content .buttons button,
+  main .students .wrapper .right-column .cource-accord .accordion-content .buttons button,
+  main .cources .wrapper .right-column .cource-accord .accordion-content .buttons button {
+    margin: 0;
+    font-size: 8px;
+  }
+  main .speakers .wrapper .right-column .cource-accord .accordion-content .text-block,
+  main .students .wrapper .right-column .cource-accord .accordion-content .text-block,
+  main .cources .wrapper .right-column .cource-accord .accordion-content .text-block {
+    padding: 22px 11px;
+  }
+  main .speakers .wrapper .right-column .buttons,
+  main .students .wrapper .right-column .buttons,
+  main .cources .wrapper .right-column .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 2px;
+  }
+  main .speakers .wrapper .right-column .buttons .tab,
+  main .students .wrapper .right-column .buttons .tab,
+  main .cources .wrapper .right-column .buttons .tab {
+    margin-top: 12px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  main .learn .wrapper {
     flex-direction: column;
-    align-items: center;
   }
-  .tariffs .column {
+  main .learn .wrapper .left-column {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+  main .learn .wrapper .left-column img#learnImage {
+    background-color: rgba(96, 96, 96, 0.8);
+    padding: 15px 11px;
+    margin: 0 0 16px 0;
     width: 100%;
-    max-width: 320px;
+    height: 100%;
   }
-  /* ====== Відгуки ====== */
-  .reviews .carousel-container {
-    flex-direction: column;
+  main .learn .wrapper .left-column a {
+    background-color: #414141;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 7px 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
   }
-  /* ====== Форма контактів ====== */
-  .contact .wrapper {
+  main .learn .wrapper .left-column a svg {
+    width: 13px;
+    height: 13px;
+  }
+  main .learn .wrapper .left-column p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+  }
+  main .learn .wrapper .right-column {
+    padding: 20px;
+  }
+  main .learn .wrapper .right-column h3 {
+    margin-bottom: 10px;
+  }
+  main .learn .wrapper .right-column p {
+    font-size: 12px;
+  }
+  main .learn .wrapper .right-column .pagination {
+    justify-content: center;
+  }
+  main .career .wrapper1,
+  main .career .wrapper2,
+  main .comunity .wrapper1,
+  main .comunity .wrapper2 {
     flex-direction: column;
     text-align: center;
+    padding: 32px 16px;
   }
-  .contact .image {
+  main .career .wrapper1 .left,
+  main .career .wrapper2 .left,
+  main .comunity .wrapper1 .left,
+  main .comunity .wrapper2 .left {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  main .career .wrapper1 .left .text,
+  main .career .wrapper2 .left .text,
+  main .comunity .wrapper1 .left .text,
+  main .comunity .wrapper2 .left .text {
+    max-width: 100%;
+  }
+  main .career .wrapper1 .left .text h3,
+  main .career .wrapper2 .left .text h3,
+  main .comunity .wrapper1 .left .text h3,
+  main .comunity .wrapper2 .left .text h3 {
+    display: none;
+  }
+  main .career .wrapper1 .left .blockButton,
+  main .career .wrapper2 .left .blockButton,
+  main .comunity .wrapper1 .left .blockButton,
+  main .comunity .wrapper2 .left .blockButton {
+    width: 110%;
+  }
+  main .career .wrapper1 .left .blockButton button,
+  main .career .wrapper2 .left .blockButton button,
+  main .comunity .wrapper1 .left .blockButton button,
+  main .comunity .wrapper2 .left .blockButton button {
+    font-size: 10px;
+    padding: 6px 6px;
+  }
+  main .career .wrapper1 .image,
+  main .career .wrapper2 .image,
+  main .comunity .wrapper1 .image,
+  main .comunity .wrapper2 .image {
+    position: absolute;
+    width: 220px;
+    height: 180px;
+    overflow: hidden;
+    top: 25%;
+    border-radius: 0;
+  }
+  main .career .wrapper1 .image img,
+  main .career .wrapper2 .image img,
+  main .comunity .wrapper1 .image img,
+  main .comunity .wrapper2 .image img {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .tariffs {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+  }
+  main .tariffs .wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  main .tariffs .column {
+    min-width: 80%;
+    margin: 0 10px;
+  }
+  main .tariffs .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
+  main .tariffs .carousel-btn .prev {
+    left: 10px;
+  }
+  main .tariffs .carousel-btn .next {
+    right: 10px;
+  }
+  main .carousel {
+    width: 100%;
+  }
+  main .carousel .testimonial {
+    width: 100%;
+  }
+  main .carousel .testimonial .testimonial-content .quote {
+    width: 50%;
+  }
+  main .carousel .testimonial::before {
+    display: none;
+  }
+  main .carousel .testimonial::after {
+    display: none;
+  }
+  main .contact .wrapper {
+    text-align: center;
+  }
+  main .contact .wrapper .contact-content {
+    flex-direction: column;
+    padding: 47px 38px;
+    text-align: left;
+  }
+  main .contact .wrapper .contact-content .contact-info,
+  main .contact .wrapper .contact-content .contact-form {
+    max-width: 100%;
+  }
+  main .contact .wrapper .contact-content .contact-info p,
+  main .contact .wrapper .contact-content .contact-form p {
+    font-size: 12px;
+  }
+  main .contact .wrapper .contact-content .contact-info h3 {
+    font-family: Jost;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+  main .contact .wrapper .contact-content .contact-info img {
+    display: none;
+  }
+  main .contact .wrapper .contact-content .contact-form input {
+    font-family: Jost;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  main .contact .image {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+  }
+  footer {
+    padding: 36px;
+  }
+  footer .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .row .column {
+    margin: 0;
+    justify-content: flex-start;
+  }
+  footer .row .column .cont p {
+    font-size: 16px;
+  }
+  footer .row .column .cont .email,
+  footer .row .column .cont .location {
+    font-size: 12px;
+  }
+  footer .row .column .cont .copy {
+    font-size: 14px;
+  }
+  footer .row .column .licence {
+    font-size: 14px;
+  }
+  footer .row .first p {
+    font-size: 12px;
+    width: 70%;
+    height: 32px;
+    margin-top: 28px;
+    overflow: hidden;
+  }
+  footer .row .first .created {
+    display: none;
+  }
+  footer .row .second {
+    display: none;
+  }
+  footer .row .third {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer .row .third .licence {
+    flex-direction: column;
+  }
+  footer .row .third .licence p {
+    margin-top: 5px;
+  }
+  footer .row .third .cont {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+  }
+  footer .row .third .cont p {
+    margin-bottom: 10px;
+  }
+  footer .row .third .copy {
+    display: block;
+    margin-top: 10px;
+  }
+  footer .row .footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  footer .row .footer-links a {
+    margin-bottom: 0;
+  }
+  footer .row .footer-bottom {
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 320px) {
+  footer {
+    padding: 20px;
+  }
+  footer .logo-and-text p,
+  footer .contact-info p,
+  footer .footer-links a,
+  footer .footer-bottom {
+    font-size: 12px;
+  }
+  footer .contact-info h3 {
+    font-size: 16px;
+  }
+  footer .footer-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
   }
 }
 

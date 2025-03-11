@@ -752,10 +752,13 @@ const testimonialsData = [
 ];
 
 const carousel = document.querySelector(".carousel");
+const dotsContainer = document.querySelector(".dots");
 let index = 0;
 
 function createTestimonials() {
   carousel.innerHTML = "";
+  dotsContainer.innerHTML = "";
+
   const extendedData = [
     ...testimonialsData,
     testimonialsData[0],
@@ -772,19 +775,53 @@ function createTestimonials() {
     carousel.appendChild(div);
   });
 
+  testimonialsData.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
   updateCarousel();
+  updateDots();
 }
 
 function updateCarousel() {
-  const offset = -(index * 33.33);
-  carousel.style.transform = `translateX(${offset}% )`;
+  const screenWidth = window.innerWidth;
+  let offset;
+  if (screenWidth < 768) {
+    offset = -(index * 100);
+  } else {
+    offset = -(index * 33.33);
+  }
+
+  carousel.style.transform = `translateX(${offset}%)`;
+}
+
+function updateDots() {
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
 }
 
 function moveSlide(direction) {
   index =
     (index + direction + testimonialsData.length) % testimonialsData.length;
   updateCarousel();
+  updateDots();
 }
+
+function goToSlide(i) {
+  index = i;
+  updateCarousel();
+  updateDots();
+}
+
 createTestimonials();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -810,4 +847,65 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.remove("active");
     overlay.classList.remove("active");
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselWrapper = document.querySelector(".tariffs .wrapper");
+  const columns = document.querySelectorAll(".tariffs .column");
+  let currentIndex = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  const updateCarousel = () => {
+    const offset = -(currentIndex * (columns[0].clientWidth + 20));
+    carouselWrapper.style.transform = `translateX(${offset}px)`;
+  };
+
+  const touchStart = (index) => (event) => {
+    startX = getPositionX(event);
+    isDragging = true;
+    carouselWrapper.classList.add("grabbing");
+  };
+
+  const touchMove = (event) => {
+    if (!isDragging) return;
+
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startX;
+    carouselWrapper.style.transform = `translateX(${currentTranslate}px)`;
+  };
+
+  const touchEnd = () => {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -50 && currentIndex < columns.length - 1) currentIndex++;
+    if (movedBy > 50 && currentIndex > 0) currentIndex--;
+
+    updateCarousel();
+    prevTranslate = -(currentIndex * (columns[0].clientWidth + 20));
+    carouselWrapper.classList.remove("grabbing");
+  };
+
+  const getPositionX = (event) => {
+    return event.type.includes("mouse")
+      ? event.pageX
+      : event.touches[0].clientX;
+  };
+
+  columns.forEach((column) => {
+    column.addEventListener("mousedown", touchStart());
+    column.addEventListener("mousemove", touchMove);
+    column.addEventListener("mouseup", touchEnd);
+    column.addEventListener("mouseleave", touchEnd);
+
+    column.addEventListener("touchstart", touchStart());
+    column.addEventListener("touchmove", touchMove);
+    column.addEventListener("touchend", touchEnd);
+  });
+
+  window.addEventListener("resize", updateCarousel);
+  updateCarousel();
 });
